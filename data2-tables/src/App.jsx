@@ -8,6 +8,7 @@ import {
   TableRow,
   Paper,
 } from "@mui/material";
+import Checkbox from "@mui/material/Checkbox";
 
 function PreExecutionTable() {
   const rows = [
@@ -20,7 +21,23 @@ function PreExecutionTable() {
       action: "Save",
     },
     {
-      srNo: 1,
+      srNo: 2,
+      stage: "Fencing",
+      activity: "Confirmation from BD",
+      status: false,
+      uploadDocument: "VIEW",
+      action: "Save",
+    },
+    {
+      srNo: 3,
+      stage: "Fencing",
+      activity: "Confirmation from BD",
+      status: false,
+      uploadDocument: "VIEW",
+      action: "Save",
+    },
+    {
+      srNo: 4,
       stage: "Fencing",
       activity: "Confirmation from BD",
       status: true,
@@ -28,7 +45,7 @@ function PreExecutionTable() {
       action: "Save",
     },
     {
-      srNo: 1,
+      srNo: 5,
       stage: "Fencing",
       activity: "Confirmation from BD",
       status: true,
@@ -36,7 +53,7 @@ function PreExecutionTable() {
       action: "Save",
     },
     {
-      srNo: 1,
+      srNo: 6,
       stage: "Fencing",
       activity: "Confirmation from BD",
       status: true,
@@ -44,7 +61,7 @@ function PreExecutionTable() {
       action: "Save",
     },
     {
-      srNo: 1,
+      srNo: 7,
       stage: "Fencing",
       activity: "Confirmation from BD",
       status: true,
@@ -52,7 +69,7 @@ function PreExecutionTable() {
       action: "Save",
     },
     {
-      srNo: 1,
+      srNo: 8,
       stage: "Fencing",
       activity: "Confirmation from BD",
       status: true,
@@ -60,7 +77,7 @@ function PreExecutionTable() {
       action: "Save",
     },
     {
-      srNo: 1,
+      srNo: 9,
       stage: "Fencing",
       activity: "Confirmation from BD",
       status: true,
@@ -68,7 +85,7 @@ function PreExecutionTable() {
       action: "Save",
     },
     {
-      srNo: 1,
+      srNo: 10,
       stage: "Fencing",
       activity: "Confirmation from BD",
       status: true,
@@ -76,7 +93,7 @@ function PreExecutionTable() {
       action: "Save",
     },
     {
-      srNo: 1,
+      srNo: 11,
       stage: "Fencing",
       activity: "Confirmation from BD",
       status: true,
@@ -84,7 +101,7 @@ function PreExecutionTable() {
       action: "Save",
     },
     {
-      srNo: 1,
+      srNo: 12,
       stage: "Fencing",
       activity: "Confirmation from BD",
       status: true,
@@ -92,7 +109,7 @@ function PreExecutionTable() {
       action: "Save",
     },
     {
-      srNo: 1,
+      srNo: 13,
       stage: "Fencing",
       activity: "Confirmation from BD",
       status: true,
@@ -100,7 +117,7 @@ function PreExecutionTable() {
       action: "Save",
     },
     {
-      srNo: 1,
+      srNo: 14,
       stage: "Fencing",
       activity: "Confirmation from BD",
       status: true,
@@ -108,7 +125,7 @@ function PreExecutionTable() {
       action: "Save",
     },
     {
-      srNo: 1,
+      srNo: 15,
       stage: "Fencing",
       activity: "Confirmation from BD",
       status: true,
@@ -116,23 +133,7 @@ function PreExecutionTable() {
       action: "Save",
     },
     {
-      srNo: 1,
-      stage: "Fencing",
-      activity: "Confirmation from BD",
-      status: true,
-      uploadDocument: "VIEW",
-      action: "Save",
-    },
-    {
-      srNo: 1,
-      stage: "Fencing",
-      activity: "Confirmation from BD",
-      status: true,
-      uploadDocument: "VIEW",
-      action: "Save",
-    },
-    {
-      srNo: 1,
+      srNo: 16,
       stage: "Fencing",
       activity: "Confirmation from BD",
       status: true,
@@ -142,7 +143,7 @@ function PreExecutionTable() {
   ];
 
   return (
-    <TableContainer  component={Paper}>
+    <TableContainer component={Paper}>
       <Table sx={{ minWidth: 1300 }} aria-label="pre-execution table">
         <TableHead>
           <TableRow>
@@ -165,9 +166,15 @@ function PreExecutionTable() {
                 <TableRow>{row.activity}</TableRow>
               </TableCell>
               <TableCell>
-                <TableRow>{row.status ? "✓" : ""}</TableRow>
-                <TableRow>{row.status ? "✓" : ""}</TableRow>
-                <TableRow>{row.status ? "✓" : ""}</TableRow>
+                <TableRow>
+                  {row.status ? <Checkbox defaultChecked /> : <Checkbox />}
+                </TableRow>
+                <TableRow>
+                  {row.status ? <Checkbox defaultChecked /> : <Checkbox />}
+                </TableRow>
+                <TableRow>
+                  {row.status ? <Checkbox defaultChecked /> : <Checkbox />}
+                </TableRow>
               </TableCell>
               <TableCell>{row.uploadDocument}</TableCell>
               <TableCell>{row.action}</TableCell>
