@@ -4,8 +4,8 @@
   box-sizing: border-box;
 }
 
-
 body{
-  padding: 20px;
+  width: 100%;
+  height: 100%;
 }
- 
+

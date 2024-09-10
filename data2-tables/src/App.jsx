@@ -27,7 +27,7 @@ const ActivityTableCell = styled(StyledTableCell)(({ theme }) => ({
 
 const StyledTableRow = styled(TableRow)(({ theme }) => ({
   "&:last-child td, &:last-child th": {
-    borderBottom: "1px solid black",
+    borderBottom: "2px solid black",
   },
 }));
 
